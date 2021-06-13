@@ -1,12 +1,11 @@
-import {React, useState} from "react";
+import React from "react";
 import {HashRouter as Router, Route, Switch} from "react-router-dom";
-import Auth from "../routes/Auth";
-import Home from "../routes/Home";
+import Auth from "routes/Auth";
+import Home from "routes/Home";
 
 //인증(로그인) 여부에 따라 다른 라우터
 //Hooks를 이용해서 로그인이 되어 있다면 Home을 보여준다.
-const AppRouter =  () => {
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
+const AppRouter =  ({isLoggedIn}) => {
     return (
         <Router>
             <Switch>
